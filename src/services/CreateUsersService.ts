@@ -1,3 +1,5 @@
+import bcrypt from 'bcryptjs';
+
 import { dataSource } from '../database';
 import { User } from '../entities/User';
 
@@ -19,10 +21,12 @@ class CreateUsersService {
       throw new Error("User already exists");
     }
 
+    const encryptPassword = await bcrypt.hash(password, 8);
+
     const user = repository.create({
       name,
       email,
-      password
+      password: encryptPassword
     });
 
     await repository.save(user);
