@@ -1,16 +1,14 @@
 import 'reflect-metadata';
 import express from 'express';
 
+import "./database";
+import { routes } from '../routes';
+
 const app = express();
 
 app.use(express.json());
+app.use(routes);
 
-app.get("/authClient", (request, response) => {
-  return response.json({
-    message: "First route is running"
-  })
-});
-
-const url = "http://localhost:3333/authClient";
+const url = "http://localhost:3333";
 
 app.listen(3333, () => console.log(`Running at ${url}`));
