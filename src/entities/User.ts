@@ -11,6 +11,9 @@ class User {
   name: string;
 
   @Column()
+  admin: boolean;
+
+  @Column()
   email: string;
 
   @Column()

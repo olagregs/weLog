@@ -33,7 +33,7 @@ class AuthUserService {
 
     const token = sign({
       email: emailValidation.email,
-    }, 'f3ae88a53aa11d58a77c6246680d0dd7', {
+    }, process.env.SECRET_KEY, {
       subject: emailValidation.id,
       expiresIn: '1d'
     });

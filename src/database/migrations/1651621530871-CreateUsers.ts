@@ -16,6 +16,12 @@ export class CreateUsers1651621530871 implements MigrationInterface {
           type: "string"
         },
         {
+          name: "admin",
+          type: "boolean",
+          isNullable: true,
+          default: false
+        },
+        {
           name: "email",
           type: "string"
         },

@@ -1,6 +1,7 @@
 import 'reflect-metadata';
 import 'express-async-errors';
 import express from 'express';
+import 'dotenv/config';
 
 import "./database";
 import { routes } from '../routes';

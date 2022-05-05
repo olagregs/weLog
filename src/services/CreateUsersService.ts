@@ -5,12 +5,13 @@ import { User } from '../entities/User';
 
 interface ICreateUser {
   name: string;
+  admin?: boolean;
   email: string;
   password: string;
 }
 
 class CreateUsersService {
-  async create({ name, email, password }: ICreateUser) {
+  async create({ name, admin = false, email, password }: ICreateUser) {
     const repository = dataSource.getRepository(User);
 
     const userAlreadyExists = await repository.findOne({
@@ -25,6 +26,7 @@ class CreateUsersService {
 
     const user = repository.create({
       name,
+      admin,
       email,
       password: encryptPassword
     });
