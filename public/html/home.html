@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/home.css" />
+  <link rel="stylesheet" href="../css/animation.css" />
+  <link rel="icon" href="../images/icon.PNG" />
+  <title>weLog - Homepage</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="compliments-session">
+      <div class="form">
+        <span>Faça um elogio!</span>
+
+        <select name="users" id="users">
+          <option value="teste">Selecione uma pessoa</option>
+          <script type="text/template">
+            <option value="teste">{{name}}</option>
+          </script>
+        </select>
+
+        <select name="tags" id="tags">
+          <option value="teste">Selecione uma marcação</option>
+          <script type="text/template">
+            <option value="teste">{{tag}}</option>
+          </script>
+        </select>
+
+        <textarea name="message" id="message" placeholder="Digite uma mensagem legal"></textarea>
+
+        <input type="submit" class="btn-send" value="Enviar">
+      </div>
+    </div>
+
+    <div class="my-compliments">
+      <script type="text/template">
+      <div class="compliment">
+        <div class="header">{{tag}}</div>
+
+        <div class="body">
+          <div class="user">{{name}}</div>
+          <div class="message">{{message}}</div>
+        </div>
+      </div>
+      </script>
+    </div>
+  </div>
+</body>
+
+<script src=" https://kit.fontawesome.com/50c3adfcb8.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/mustache@latest"></script>
+
+</html>

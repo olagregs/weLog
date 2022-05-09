@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/login.css" />
+  <link rel="stylesheet" href="../css/animation.css" />
+  <link rel="icon" href="../images/icon.PNG" />
+  <title>weLog - Login</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="login-wrapper">
+      <div class="form">
+        <span>Login</span>
+
+        <input type="text" class="email" placeholder="Email" />
+
+        <input type="password" class="password" placeholder="Senha" />
+
+        <input type="submit" id="login" class="btn-login" value="Entrar" onclick="wrong()" />
+      </div>
+    </div>
+
+    <div class="image">
+      <img src="../images/loginPage.png" />
+    </div>
+  </div>
+
+  <script>
+    function wrong() {
+      const loginButton = document.getElementById("login");
+
+      loginButton.style.animation = "shake .2s";
+    }
+  </script>
+</body>
+
+</html>

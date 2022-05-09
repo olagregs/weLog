@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #b388eb;
+  font-family: 'Poppins', 'Helvetica', 'Sans-serif';
+}
+
+::placeholder {
+  color: #ccc;
+}
+
+.container {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
